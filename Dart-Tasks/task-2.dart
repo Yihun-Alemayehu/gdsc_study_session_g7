@@ -1,13 +1,13 @@
 void main() {
   final numbers = [1, 8, 3, 3, 4, 45, 5, 69, 10, 39, 91, 10];
   final max = findMaximum(numbers);
-  print(max);
+  //print(max);
   final min = findMinimum(numbers);
-  print(min);
+  //print(min);
   final sum = calculateSum(numbers);
-  print(sum);
+  //print(sum);
   final average = calculateAverage(numbers);
-  print(average);
+  //print(average);
 }
 
 int findMaximum(List<int> numbers) {
