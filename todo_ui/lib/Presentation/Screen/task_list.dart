@@ -24,9 +24,9 @@ class _TodoListPageState extends State<TodoListPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               //listItem[0][1],
-              const SizedBox(
-                height: 30,
-              ),
+              // const SizedBox(
+              //   height: 30,
+              // ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -69,46 +69,79 @@ class _TodoListPageState extends State<TodoListPage> {
                 child: ListView.builder(
                   itemCount: listItem.length,
                   itemBuilder: (context, index) {
-                    return Container(
-                      margin: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                                blurRadius: 5,
-                                offset: const Offset(-5, -5),
-                                color: Colors.grey.withOpacity(0.2)),
-                            BoxShadow(
-                                //blurRadius: 3,
-                                offset: const Offset(5, 5),
-                                color: Colors.grey.withOpacity(0.2)),
-                          ],
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20)),
-                      child: ListTile(
-                        onTap: () {
-                          Navigator.of(context).pushNamed('/taskdetail');
-                        },
-                        contentPadding: const EdgeInsets.all(10),
-                        leading: Text(
-                          listItem[index][0],
-                          style: const TextStyle(
-                            fontSize: 30,
+                    return Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ListTile(
+                          onTap: () {
+                            Navigator.of(context).pushNamed('/taskdetail');
+                          },
+                          contentPadding: const EdgeInsets.all(15),
+                          leading: Text(
+                            listItem[index][0],
+                            style: const TextStyle(
+                              fontSize: 30,
+                            ),
                           ),
-                        ),
-                        title: Text(
-                          listItem[index][1],
-                          style: const TextStyle(
-                            fontSize: 20,
+                          title: Text(
+                            listItem[index][1],
+                            style: const TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                        trailing: Text(
-                          listItem[index][2],
-                          style: const TextStyle(
-                            fontSize: 15,
+                          trailing: Text(
+                            listItem[index][2],
+                            style: const TextStyle(
+                              fontSize: 15,
+                            ),
                           ),
                         ),
                       ),
                     );
+                    // return Container(
+                    //   margin: const EdgeInsets.all(10),
+                    //   decoration: BoxDecoration(
+                    //       boxShadow: [
+                    //         BoxShadow(
+                    //             blurRadius: 5,
+                    //             offset: const Offset(-5, -5),
+                    //             color: Colors.grey.withOpacity(0.2)),
+                    //         BoxShadow(
+                    //             //blurRadius: 3,
+                    //             offset: const Offset(5, 5),
+                    //             color: Colors.grey.withOpacity(0.2)),
+                    //       ],
+                    //       color: Colors.white,
+                    //       borderRadius: BorderRadius.circular(20)),
+                    //   child: ListTile(
+                    //     onTap: () {
+                    //       Navigator.of(context).pushNamed('/taskdetail');
+                    //     },
+                    //     contentPadding: const EdgeInsets.all(10),
+                    //     leading: Text(
+                    //       listItem[index][0],
+                    //       style: const TextStyle(
+                    //         fontSize: 30,
+                    //       ),
+                    //     ),
+                    //     title: Text(
+                    //       listItem[index][1],
+                    //       style: const TextStyle(
+                    //         fontSize: 20,
+                    //       ),
+                    //     ),
+                    //     trailing: Text(
+                    //       listItem[index][2],
+                    //       style: const TextStyle(
+                    //         fontSize: 15,
+                    //       ),
+                    //     ),
+                    //   ),
+                    // );
                   },
                 ),
               ),

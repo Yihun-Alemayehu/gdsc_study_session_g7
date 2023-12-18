@@ -12,10 +12,11 @@ class TaskDetailPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              //listItem[0][1],
               const SizedBox(
-                height: 30,
+                height: 10,
               ),
+
+              // Title bar row
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -27,7 +28,6 @@ class TaskDetailPage extends StatelessWidget {
                       Icons.arrow_back_ios,
                       color: Colors.amber[900],
                     ),
-                    //color: Colors.amber[900],
                   ),
                   const Text(
                     'Task Detail',
@@ -38,10 +38,8 @@ class TaskDetailPage extends StatelessWidget {
                   const Icon(Icons.more_vert),
                 ],
               ),
-              // const SizedBox(
-              //   height: 10,
-              // ),
 
+              // Image 
               Image.asset('assets/shopping-1.png'),
               const SizedBox(
                 height: 10,
@@ -50,19 +48,18 @@ class TaskDetailPage extends StatelessWidget {
               const Text(
                 'Title',
                 style: TextStyle(
-                  //color: Colors.amber[900],
                   fontSize: 20,
-                  //fontWeight: FontWeight.w600,
                 ),
               ),
+
+              
               Container(
-                height: 80,
+                height: 60,
                 width: MediaQuery.of(context).size.width,
-                margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                 decoration: BoxDecoration(
-                  //color: Colors.grey,
                   boxShadow: [
                     BoxShadow(
                         //blurRadius: 5,
@@ -135,7 +132,6 @@ class TaskDetailPage extends StatelessWidget {
               const Text(
                 'Deadline',
                 style: TextStyle(
-                  //color: Colors.amber[900],
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
                 ),
