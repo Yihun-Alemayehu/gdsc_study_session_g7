@@ -9,10 +9,32 @@ class TodoListPage extends StatefulWidget {
 
 class _TodoListPageState extends State<TodoListPage> {
   final List listItem = [
-    ["U", "UI/UX App Design", "April 29, 2023"],
-    ["U", "UI/UX App Design", "April 29, 2023"],
-    ["V", "View candidate", "April 29, 2023"],
-    ["F", "Football Drybiling", "April 29, 2023"],
+    [
+      "U",
+      "UI/UX App Design",
+      "April 29, 2023",
+    ],
+    [
+      "U",
+      "UI/UX App Design",
+      "April 29, 2023",
+    ],
+    [
+      "V",
+      "View candidate",
+      "April 29, 2023",
+    ],
+    [
+      "F",
+      "Football Drybiling",
+      "April 29, 2023",
+    ],
+  ];
+  final List colorList = [
+    Colors.deepOrange,
+    Colors.green,
+    Colors.yellow,
+    Colors.red,
   ];
   @override
   Widget build(BuildContext context) {
