@@ -170,7 +170,7 @@ class _HomePageState extends State<HomePage> {
                 child: Text(
                   'Categories',
                   style: TextStyle(
-                    fontSize: 35,
+                    fontSize: 30,
                   ),
                 ),
               ),
@@ -290,7 +290,637 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
-              )
+              ),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    Text(
+                      'Recommendation',
+                      style: TextStyle(
+                        fontSize: 25,
+                      ),
+                    ),
+                    Spacer(),
+                    Icon(Icons.arrow_forward_ios)
+                  ],
+                ),
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Stack(
+                        alignment: Alignment.topRight,
+                        children: [
+                          Container(
+                            // color: Colors.grey,
+                            // height: 100,
+                            width: 110,
+                            child: Column(
+                              children: [
+                                Image.asset('assets/Rectangle.png'),
+                                Text(
+                                  'Papillion Based on true story',
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Container(
+                              color: Colors.amber[900],
+                              child: const Column(
+                                children: [
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    '5.0',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Stack(
+                        alignment: Alignment.topRight,
+                        children: [
+                          Container(
+                            // color: Colors.grey,
+                            // height: 100,
+                            width: 110,
+                            child: Column(
+                              children: [
+                                Image.asset('assets/Rectangle3.png'),
+                                Text(
+                                  'Yebedel Kassa Novel',
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Container(
+                              color: Colors.amber[900],
+                              child: const Column(
+                                children: [
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    '4.5',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Stack(
+                        alignment: Alignment.topRight,
+                        children: [
+                          Container(
+                            // color: Colors.grey,
+                            // height: 100,
+                            width: 110,
+                            child: Column(
+                              children: [
+                                Image.asset('assets/Rectangle.png'),
+                                Text(
+                                  'Papillion Based on true story',
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Container(
+                              color: Colors.amber[900],
+                              child: const Column(
+                                children: [
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    '4.5',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Stack(
+                        alignment: Alignment.topRight,
+                        children: [
+                          Container(
+                            // color: Colors.grey,
+                            // height: 100,
+                            width: 110,
+                            child: Column(
+                              children: [
+                                Image.asset('assets/Rectangle.png'),
+                                Text(
+                                  'Papillion Based on true story',
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Container(
+                              color: Colors.amber[900],
+                              child: const Column(
+                                children: [
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    '5.0',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Stack(
+                        alignment: Alignment.topRight,
+                        children: [
+                          Container(
+                            // color: Colors.grey,
+                            // height: 100,
+                            width: 110,
+                            child: Column(
+                              children: [
+                                Image.asset('assets/Rectangle3.png'),
+                                Text(
+                                  'Yebedel Kassa Novel',
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Container(
+                              color: Colors.amber[900],
+                              child: const Column(
+                                children: [
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    '4.5',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Stack(
+                        alignment: Alignment.topRight,
+                        children: [
+                          Container(
+                            // color: Colors.grey,
+                            // height: 100,
+                            width: 110,
+                            child: Column(
+                              children: [
+                                Image.asset('assets/Rectangle.png'),
+                                Text(
+                                  'Papillion Based on true story',
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Container(
+                              color: Colors.amber[900],
+                              child: const Column(
+                                children: [
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    '4.5',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    Text(
+                      'New',
+                      style: TextStyle(
+                        fontSize: 25,
+                      ),
+                    ),
+                    Spacer(),
+                    Icon(Icons.arrow_forward_ios)
+                  ],
+                ),
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Container(
+                        width: 110,
+                        child: Column(
+                          children: [
+                            Image.asset('assets/Rectangle4.png'),
+                            Text('Rich Dad Poor Dad Ro. T')
+                          ],
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Container(
+                        width: 110,
+                        child: Column(
+                          children: [
+                            Image.asset('assets/Rectangle5.png'),
+                            Text('Piyasa muhamud Ga Tebkign'),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Container(
+                        width: 110,
+                        child: Column(
+                          children: [
+                            Image.asset('assets/Rectangle4.png'),
+                            Text('Rich Dad Poor Dad Ro. T')
+                          ],
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Container(
+                        width: 110,
+                        child: Column(
+                          children: [
+                            Image.asset('assets/Rectangle5.png'),
+                            Text('Piyasa muhamud Ga Tebkign'),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Container(
+                        width: 110,
+                        child: Column(
+                          children: [
+                            Image.asset('assets/Rectangle4.png'),
+                            Text('Rich Dad Poor Dad Ro. T')
+                          ],
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Container(
+                        width: 110,
+                        child: Column(
+                          children: [
+                            Image.asset('assets/Rectangle5.png'),
+                            Text('Piyasa muhamud Ga Tebkign'),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    Text(
+                      'Trending',
+                      style: TextStyle(
+                        fontSize: 25,
+                      ),
+                    ),
+                    Spacer(),
+                    Icon(Icons.arrow_forward_ios)
+                  ],
+                ),
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Stack(
+                        alignment: Alignment.topRight,
+                        children: [
+                          Container(
+                            // color: Colors.grey,
+                            // height: 100,
+                            width: 110,
+                            child: Column(
+                              children: [
+                                Image.asset('assets/Rectangle6.png'),
+                                Text(
+                                  'Born Crime by Trevor noha',
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Container(
+                              color: Colors.amber[900],
+                              child: const Column(
+                                children: [
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    '5.0',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Stack(
+                        alignment: Alignment.topRight,
+                        children: [
+                          Container(
+                            // color: Colors.grey,
+                            // height: 100,
+                            width: 110,
+                            child: Column(
+                              children: [
+                                Image.asset('assets/Rectangle7.png'),
+                                Text(
+                                  'Evolution of the learning brain',
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Container(
+                              color: Colors.amber[900],
+                              child: const Column(
+                                children: [
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    '4.5',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Stack(
+                        alignment: Alignment.topRight,
+                        children: [
+                          Container(
+                            // color: Colors.grey,
+                            // height: 100,
+                            width: 110,
+                            child: Column(
+                              children: [
+                                Image.asset('assets/Rectangle6.png'),
+                                Text(
+                                  'Born Crime by Trevor noha',
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Container(
+                              color: Colors.amber[900],
+                              child: const Column(
+                                children: [
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    '4.5',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Stack(
+                        alignment: Alignment.topRight,
+                        children: [
+                          Container(
+                            // color: Colors.grey,
+                            // height: 100,
+                            width: 110,
+                            child: Column(
+                              children: [
+                                Image.asset('assets/Rectangle7.png'),
+                                Text(
+                                  'Evolution of the learning brain',
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Container(
+                              color: Colors.amber[900],
+                              child: const Column(
+                                children: [
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    '5.0',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Stack(
+                        alignment: Alignment.topRight,
+                        children: [
+                          Container(
+                            // color: Colors.grey,
+                            // height: 100,
+                            width: 110,
+                            child: Column(
+                              children: [
+                                Image.asset('assets/Rectangle6.png'),
+                                Text(
+                                  'Born Crime by Trevor noha',
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Container(
+                              color: Colors.amber[900],
+                              child: const Column(
+                                children: [
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    '4.5',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Stack(
+                        alignment: Alignment.topRight,
+                        children: [
+                          Container(
+                            // color: Colors.grey,
+                            // height: 100,
+                            width: 110,
+                            child: Column(
+                              children: [
+                                Image.asset('assets/Rectangle7.png'),
+                                Text(
+                                  'Evolution of the learning brain',
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Container(
+                              color: Colors.amber[900],
+                              child: const Column(
+                                children: [
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    '4.5',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
