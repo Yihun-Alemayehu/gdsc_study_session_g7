@@ -28,10 +28,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         elevation: 0,
-        leading: const Icon(
-          Icons.sort,
-          color: Colors.black,
-        ),
+        leading: Image.asset('assets/menu.png'),
       ),
       body: SingleChildScrollView(
         child: Padding(
