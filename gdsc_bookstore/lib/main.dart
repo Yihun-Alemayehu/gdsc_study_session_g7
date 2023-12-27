@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gdsc_bookstore/home_page.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
+
 void main() {
   runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
@@ -38,6 +39,7 @@ class _MainPageState extends State<MainPage> {
             icon: Image.asset('assets/web-content.png'),
             title: Text(""),
             selectedColor: Colors.amber[900],
+            
           ),
 
           /// Likes
