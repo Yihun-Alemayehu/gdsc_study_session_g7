@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gdsc_bookstore/home_page.dart';
+import 'package:gdsc_bookstore/onboarding_screen.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
-
 
 void main() {
   runApp(const MaterialApp(
@@ -20,11 +20,11 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   var _currentIndex = 2;
   List pages = [
-    HomePage(),
-    HomePage(),
-    HomePage(),
-    HomePage(),
-    HomePage(),
+    const OnboardingScreen(),
+    const HomePage(),
+    const HomePage(),
+    const HomePage(),
+    const HomePage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -37,9 +37,8 @@ class _MainPageState extends State<MainPage> {
           /// Home
           SalomonBottomBarItem(
             icon: Image.asset('assets/web-content.png'),
-            title: Text(""),
+            title: const Text(""),
             selectedColor: Colors.amber[900],
-            
           ),
 
           /// Likes
