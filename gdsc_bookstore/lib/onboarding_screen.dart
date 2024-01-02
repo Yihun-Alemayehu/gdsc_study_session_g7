@@ -1,5 +1,8 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:gdsc_bookstore/main.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:lottie/lottie.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -59,17 +62,26 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                       AnimatedTextKit(
                         animatedTexts: [
                           TypewriterAnimatedText(
-                            'Embark on a Literary Journey ',
-
+                            'Embark on a Literacy Journey ',
+                            textStyle: const TextStyle(
+                              fontStyle: FontStyle.italic,
+                              fontWeight: FontWeight.w700,
+                            ),
                             // curve: Curves.bounceInOut,
-                            speed: Duration(milliseconds: 50),
+                            speed: const Duration(milliseconds: 50),
                           )
                         ],
                         isRepeatingAnimation: false,
                       ),
                       AnimatedTextKit(
                         animatedTexts: [
-                          WavyAnimatedText('and'),
+                          WavyAnimatedText(
+                            'and',
+                            textStyle: const TextStyle(
+                              fontStyle: FontStyle.italic,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
                         ],
                         isRepeatingAnimation: false,
                       ),
@@ -78,9 +90,10 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                           TypewriterAnimatedText(
                             'Explore Endless World.',
                             textStyle: const TextStyle(
+                              fontStyle: FontStyle.italic,
                               fontWeight: FontWeight.w700,
                             ),
-                            speed: Duration(milliseconds: 50),
+                            speed: const Duration(milliseconds: 50),
                           )
                         ],
                         isRepeatingAnimation: false,
@@ -88,19 +101,25 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                       const SizedBox(
                         height: 50,
                       ),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Colors.blue,
-                            borderRadius: BorderRadius.circular(10)),
-                        child: const Padding(
-                          padding: EdgeInsets.symmetric(
-                              vertical: 15, horizontal: 60),
-                          child: Text(
-                            'Get Started',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 25,
-                              fontWeight: FontWeight.w500,
+                      TextButton(
+                        onPressed: () {
+                          Get.to(() => const MainPage(),
+                              transition: Transition.cupertino);
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: Colors.blue,
+                              borderRadius: BorderRadius.circular(10)),
+                          child: const Padding(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 15, horizontal: 60),
+                            child: Text(
+                              'Get Started',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 25,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
                           ),
                         ),

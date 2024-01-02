@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:gdsc_bookstore/book_info_screen.dart';
 import 'package:gdsc_bookstore/home_page.dart';
 import 'package:gdsc_bookstore/onboarding_screen.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 void main() {
-  runApp(const MaterialApp(
+  runApp(GetMaterialApp(
     debugShowCheckedModeBanner: false,
-    home: MainPage(),
+    routes: {
+      '/': (context) => const OnboardingScreen(),
+      '/main': (context) => const MainPage(),
+      '/book-review': (context) => const BookReview(),
+      // '/taskdetail':(context) => const TaskDetailPage()
+    },
   ));
 }
 
@@ -21,7 +28,7 @@ class _MainPageState extends State<MainPage> {
   var _currentIndex = 2;
   List pages = [
     const OnboardingScreen(),
-    const HomePage(),
+    const BookReview(),
     const HomePage(),
     const HomePage(),
     const HomePage(),
