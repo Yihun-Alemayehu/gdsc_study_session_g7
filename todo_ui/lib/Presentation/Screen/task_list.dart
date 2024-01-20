@@ -1,41 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:todo_ui/data/models/task_data.dart';
 
-class TodoListPage extends StatefulWidget {
-  const TodoListPage({super.key});
-
-  @override
-  State<TodoListPage> createState() => _TodoListPageState();
-}
-
-class _TodoListPageState extends State<TodoListPage> {
-  final List listItem = [
-    [
-      "U",
-      "UI/UX App Design",
-      "April 29, 2023",
-    ],
-    [
-      "U",
-      "UI/UX App Design",
-      "April 29, 2023",
-    ],
-    [
-      "V",
-      "View candidate",
-      "April 29, 2023",
-    ],
-    [
-      "F",
-      "Football Drybiling",
-      "April 29, 2023",
-    ],
-  ];
-  final List colorList = [
-    Colors.deepOrange,
-    Colors.green,
-    Colors.yellow,
-    Colors.red,
-  ];
+class TodoListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,10 +12,6 @@ class _TodoListPageState extends State<TodoListPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              //listItem[0][1],
-              // const SizedBox(
-              //   height: 30,
-              // ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -88,82 +51,47 @@ class _TodoListPageState extends State<TodoListPage> {
                 height: 10,
               ),
               Expanded(
-                child: ListView.builder(
-                  itemCount: listItem.length,
-                  itemBuilder: (context, index) {
-                    return Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: ListTile(
-                          onTap: () {
-                            Navigator.of(context).pushNamed('/taskdetail');
-                          },
-                          contentPadding: const EdgeInsets.all(15),
-                          leading: Text(
-                            listItem[index][0],
-                            style: const TextStyle(
-                              fontSize: 30,
+                child: Consumer<TaskData>(
+                  builder: (context, value, child) {
+                    return ListView.builder(
+                      itemCount: value.taskCount,
+                      itemBuilder: (context, index) {
+                        final taskItem = value.tasks[index];
+                        return Card(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: ListTile(
+                              onTap: () {
+                                Navigator.of(context).pushNamed('/taskdetail');
+                              },
+                              contentPadding: const EdgeInsets.all(15),
+                              leading: Text(
+                                taskItem.leadingIcon,
+                                style: const TextStyle(
+                                  fontSize: 30,
+                                ),
+                              ),
+                              title: Text(
+                                taskItem.title,
+                                style: const TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              trailing: Text(
+                                taskItem.deadline,
+                                style: const TextStyle(
+                                  fontSize: 15,
+                                ),
+                              ),
                             ),
                           ),
-                          title: Text(
-                            listItem[index][1],
-                            style: const TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          trailing: Text(
-                            listItem[index][2],
-                            style: const TextStyle(
-                              fontSize: 15,
-                            ),
-                          ),
-                        ),
-                      ),
+                        );
+                      },
                     );
-                    // return Container(
-                    //   margin: const EdgeInsets.all(10),
-                    //   decoration: BoxDecoration(
-                    //       boxShadow: [
-                    //         BoxShadow(
-                    //             blurRadius: 5,
-                    //             offset: const Offset(-5, -5),
-                    //             color: Colors.grey.withOpacity(0.2)),
-                    //         BoxShadow(
-                    //             //blurRadius: 3,
-                    //             offset: const Offset(5, 5),
-                    //             color: Colors.grey.withOpacity(0.2)),
-                    //       ],
-                    //       color: Colors.white,
-                    //       borderRadius: BorderRadius.circular(20)),
-                    //   child: ListTile(
-                    //     onTap: () {
-                    //       Navigator.of(context).pushNamed('/taskdetail');
-                    //     },
-                    //     contentPadding: const EdgeInsets.all(10),
-                    //     leading: Text(
-                    //       listItem[index][0],
-                    //       style: const TextStyle(
-                    //         fontSize: 30,
-                    //       ),
-                    //     ),
-                    //     title: Text(
-                    //       listItem[index][1],
-                    //       style: const TextStyle(
-                    //         fontSize: 20,
-                    //       ),
-                    //     ),
-                    //     trailing: Text(
-                    //       listItem[index][2],
-                    //       style: const TextStyle(
-                    //         fontSize: 15,
-                    //       ),
-                    //     ),
-                    //   ),
-                    // );
                   },
                 ),
               ),
