@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:todo_ui/Presentation/Screen/task_detail.dart';
 import 'package:todo_ui/data/models/task_data.dart';
 
 class TodoListPage extends StatelessWidget {
@@ -23,7 +24,6 @@ class TodoListPage extends StatelessWidget {
                       Icons.arrow_back_ios,
                       color: Colors.amber[900],
                     ),
-                    //color: Colors.amber[900],
                   ),
                   const Text(
                     'Todo List',
@@ -65,7 +65,10 @@ class TodoListPage extends StatelessWidget {
                             padding: const EdgeInsets.all(8.0),
                             child: ListTile(
                               onTap: () {
-                                Navigator.of(context).pushNamed('/taskdetail');
+                                Navigator.of(context).pushNamed(
+                                  '/taskdetail',
+                                  arguments: index,
+                                );
                               },
                               contentPadding: const EdgeInsets.all(15),
                               leading: Text(

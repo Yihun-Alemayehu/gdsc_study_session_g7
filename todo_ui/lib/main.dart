@@ -14,9 +14,9 @@ void main() {
         debugShowCheckedModeBanner: false,
         routes: {
           '/': (context) => const IntroPage(),
-          '/todolist': (context) => const TodoListPage(),
+          '/todolist': (context) => TodoListPage(),
           '/addtask': (context) => const CreateTaskPage(),
-          '/taskdetail': (context) => const TaskDetailPage()
+          '/taskdetail': (context) => TaskDetailPage()
         },
         //home: const IntroPage(),
       );

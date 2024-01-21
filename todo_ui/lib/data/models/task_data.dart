@@ -15,33 +15,31 @@ class TaskData extends ChangeNotifier {
     Task(
       title: 'View candidate',
       leadingIcon: 'V',
-      description:
-          'First, I have to animate the logo and prototyping my design. It\'s very important',
-      deadline: 'April 29, 2023',
+      description: 'check out the candidate portfolio and projects',
+      deadline: 'june 01, 2023',
     ),
     Task(
       title: 'Football Drybling',
       leadingIcon: 'F',
-      description:
-          'First, I have to animate the logo and prototyping my design. It\'s very important',
-      deadline: 'April 29, 2023',
+      description: 'I have to watch dryb=ling tutorials from youtube',
+      deadline: 'may 09, 2023',
     ),
   ];
 
-  int get taskCount{
+  int get taskCount {
     return _tasks.length;
   }
 
   UnmodifiableListView<Task> get tasks {
-    return UnmodifiableListView(_tasks); 
+    return UnmodifiableListView(_tasks);
   }
 
-  void addTasks(Task task){
+  void addTasks(Task task) {
     _tasks.add(task);
     notifyListeners();
   }
 
-  void deleteTasks(Task task){
+  void deleteTasks(Task task) {
     _tasks.remove(task);
     notifyListeners();
   }
