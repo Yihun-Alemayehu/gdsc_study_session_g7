@@ -106,12 +106,12 @@ class TaskDetailPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.grey[200],
                     ),
-                    child: const Text(
-                      'First I have to animate the logo and prototyping my design. It\'s very important.',
+                    child: Text(
+                      taskItem.description,
                       softWrap: true,
                       overflow: TextOverflow.ellipsis,
                       maxLines: 3,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 20,
                       ),
                     ),
@@ -142,9 +142,9 @@ class TaskDetailPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.grey[200],
                     ),
-                    child: const Text(
-                      'April 29, 2023',
-                      style: TextStyle(
+                    child: Text(
+                      taskItem.deadline,
+                      style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
