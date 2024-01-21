@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
+import 'package:todo_ui/data/models/task_data.dart';
+import 'package:todo_ui/data/models/task_model.dart';
 
 class CreateTaskPage extends StatelessWidget {
   CreateTaskPage({super.key});
@@ -144,7 +147,20 @@ class CreateTaskPage extends StatelessWidget {
                         color: Colors.amber[900],
                         minWidth: double.infinity,
                         height: 60,
-                        onPressed: () {},
+                        onPressed: () {
+                          Provider.of<TaskData>(context, listen: false)
+                              .addTasks(
+                            Task(
+                              title: _titleController.text,
+                              deadline: _dueDateController.text.toString(),
+                              description: _descriptionController.text,
+                              leadingIcon: _titleController.text
+                                  .toUpperCase()
+                                  .substring(0, 1),
+                            ),
+                          );
+                          Navigator.pop(context);
+                        },
                         child: const Text(
                           'Add Task',
                           style: TextStyle(

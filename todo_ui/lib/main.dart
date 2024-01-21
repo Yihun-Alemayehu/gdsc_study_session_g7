@@ -18,7 +18,6 @@ void main() {
           '/addtask': (context) => CreateTaskPage(),
           '/taskdetail': (context) => TaskDetailPage()
         },
-        //home: const IntroPage(),
       );
     },
   ));
