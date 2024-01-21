@@ -15,7 +15,7 @@ void main() {
         routes: {
           '/': (context) => const IntroPage(),
           '/todolist': (context) => TodoListPage(),
-          '/addtask': (context) => const CreateTaskPage(),
+          '/addtask': (context) => CreateTaskPage(),
           '/taskdetail': (context) => TaskDetailPage()
         },
         //home: const IntroPage(),
