@@ -3,6 +3,8 @@ import 'package:provider/provider.dart';
 import 'package:todo_ui/data/models/task_data.dart';
 
 class TaskDetailPage extends StatelessWidget {
+  const TaskDetailPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     final int taskIndex = ModalRoute.of(context)!.settings.arguments as int;
@@ -150,6 +152,33 @@ class TaskDetailPage extends StatelessWidget {
                       ),
                     ),
                   ),
+
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  MaterialButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    color: Colors.amber[900],
+                    minWidth: double.infinity,
+                    height: 60,
+                    onPressed: () {
+                      Provider.of<TaskData>(context, listen: false)
+                          .deleteTasks(taskItem);
+                      Provider.of<TaskData>(context, listen: false)
+                          .removeFromLocal();
+                      Navigator.pop(context);
+                    },
+                    child: const Text(
+                      'delete Task',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  )
                 ],
               ),
             );

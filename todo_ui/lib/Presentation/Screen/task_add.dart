@@ -14,7 +14,7 @@ class CreateTaskPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _formKey = GlobalKey<FormBuilderState>();
+    final formKey = GlobalKey<FormBuilderState>();
 
     return Scaffold(
       body: SafeArea(
@@ -63,7 +63,7 @@ class CreateTaskPage extends StatelessWidget {
                 ),
 
                 FormBuilder(
-                  key: _formKey,
+                  key: formKey,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -159,6 +159,7 @@ class CreateTaskPage extends StatelessWidget {
                                   .substring(0, 1),
                             ),
                           );
+                          Provider.of<TaskData>(context, listen: false).addToLocal();
                           Navigator.pop(context);
                         },
                         child: const Text(

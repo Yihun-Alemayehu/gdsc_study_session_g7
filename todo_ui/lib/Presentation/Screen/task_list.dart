@@ -3,6 +3,8 @@ import 'package:provider/provider.dart';
 import 'package:todo_ui/data/models/task_data.dart';
 
 class TodoListPage extends StatelessWidget {
+  const TodoListPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
