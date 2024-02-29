@@ -1,12 +1,14 @@
 import 'dart:convert';
 
-class Task {
+import 'package:equatable/equatable.dart';
+
+class Task extends Equatable{
   final String title;
   final String leadingIcon;
   final String description;
   final String deadline;
 
-  Task({
+  const Task({
     required this.title,
     required this.leadingIcon,
     required this.description,
@@ -54,23 +56,8 @@ class Task {
   String toString() {
     return 'Task(title: $title, leadingIcon: $leadingIcon, description: $description, deadline: $deadline)';
   }
-
-  @override
-  bool operator ==(covariant Task other) {
-    if (identical(this, other)) return true;
   
-    return 
-      other.title == title &&
-      other.leadingIcon == leadingIcon &&
-      other.description == description &&
-      other.deadline == deadline;
-  }
-
   @override
-  int get hashCode {
-    return title.hashCode ^
-      leadingIcon.hashCode ^
-      description.hashCode ^
-      deadline.hashCode;
-  }
+  List<Object?> get props => [title, leadingIcon, description, deadline];
+
 }
